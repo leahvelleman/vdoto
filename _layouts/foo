@@ -1,0 +1,14 @@
+\score {
+  \new ChoirStaff <<
+    \new Staff {
+      \new Voice {
+        \relative c' { {{ treble }} }
+      }
+    }
+    \new Staff {
+      \new Voice {
+        \relative c' { {{ tenor }} }
+      }
+    }
+  >>
+}
