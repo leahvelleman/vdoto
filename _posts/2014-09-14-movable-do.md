@@ -6,12 +6,7 @@ foo: Some basic thoughts on using solfège syllables for input.
 
 LilyPond understands note names in a lot of different languages.
 
-~~~
-\include "english.ly"
-\relative c' { c d e f g a bf b c }
-~~~ 
-{: .language-lilypond}
-{% lilypond %}
+{% lilypond code_sample %}
 \include "english.ly"
 \relative c' { c d e f g a bf b c }
 {% endlilypond %}

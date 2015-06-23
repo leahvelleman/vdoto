@@ -21,11 +21,12 @@ lets us enter a C major scale as follows, without confusing the parser: `Fa` is
 always the tonic, `fa` is always the fourth degree; and similarly for `So` and
 `so`, or `La` and `la`; and so there is never any ambiguity.
 
-``` lilypond
+~~~ 
 \include "fasola.ly"
 \fasola c' { Fa So La fa so la mi Fa }
 \fasola d' { Fa So La fa so la mi Fa }
-```
+~~~
+{: .language-lilypond}
 {% lilypond %}
 \relative c' { c d e f g a b c \key d \major d, e fis g a b cis d }
 {% endlilypond %}
@@ -33,7 +34,7 @@ always the tonic, `fa` is always the fourth degree; and similarly for `So` and
 
 Here is the lilypond source code which was included (as `fasola.ly`) in that example.
 
-```
+~~~
 fasola =
   #(define-music-function (parser location k m) ; take two real arguments: k and m.
                           (ly:pitch? ly:music?) ; k should be a pitch, m should be some music
@@ -74,6 +75,6 @@ relativeDoPitchNames = #`(
 )
 pitchnames = \relativeDoPitchNames
 #(ly:parser-set-note-names parser relativeDoPitchNames)
-```
+~~~
 
 
