@@ -2,8 +2,8 @@ body {
   background: #fafaee;
   background: #fff;
     font-family: Verdana, "Bitstream Vera Sans", sans-serif;
-  font-size: 14px;
-  line-height: 1.8em;
+  font-size: 16px;
+  line-height: 1.5em;
   color: #666666;
   margin: 0px;
   padding: 0px;
@@ -11,12 +11,108 @@ body {
 b {
   font-weight: 600;
 }
-
-p {
-  margin: 0 0 1.6em 0;
-  padding: 0;
+@media (min-width: 38rem) {
+  html {
+    font-size: 20px;
+  }
 }
 
+body {
+  color: #515151;
+  background-color: #fff;
+  -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+}
+
+/* No `:visited` state is required by default (browsers will use `a`) */
+a {
+  color: #268bd2;
+  text-decoration: none;
+}
+/* `:focus` is linked to `:hover` for basic accessibility */
+a:hover,
+a:focus {
+  text-decoration: underline;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Lato";
+  margin-bottom: .5rem;
+  font-weight: bold;
+  line-height: 1.25;
+  color: #313131;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-rendering: optimizeLegibility;
+}
+h1 {
+  font-size: 1.5rem;
+}
+h2 {
+  margin-top: 1rem;
+  font-size: 1.25rem;
+}
+h3 {
+  margin: 0px;
+}
+h4, h5, h6 {
+  margin-top: 1rem;
+  font-size: 1rem;
+}
+
+/* Body text */
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+strong {
+  color: #303030;
+}
+
+
+
+dt {
+  font-weight: bold;
+}
+dd {
+  margin-bottom: .5rem;
+}
+
+abbr {
+  font-size: 85%;
+  font-weight: bold;
+  color: #555;
+  text-transform: uppercase;
+}
+abbr[title] {
+  cursor: help;
+  border-bottom: 1px dotted #e5e5e5;
+}
+
+/* Quotes */
+blockquote {
+  padding: .5rem 1rem;
+  margin: .8rem 0;
+  color: #7a7a7a;
+  border-left: .25rem solid #e5e5e5;
+}
+blockquote p:last-child {
+  margin-bottom: 0;
+}
+@media (min-width: 30rem) {
+  blockquote {
+    padding-right: 5rem;
+    padding-left: 1.25rem;
+  }
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  margin: 0 0 1rem;
+  border-radius: 5px;
+}
 iframe {
   margin-left: 0em;
   padding-left: 40px;
@@ -25,6 +121,13 @@ iframe {
   width: 560px;
 }
 
+.highlight {
+  margin: 2em 1em 2.5em 0;
+  padding: 5px 0 5px 10px;
+  border-width: 1px 0 0 1px;
+  border-color: #bbb;
+  border-style: solid;
+}
 .code {
   margin: 2em 1em 2.5em 0;
   padding: 5px 0 5px 10px;
@@ -49,34 +152,6 @@ pre + p .score {
   border-style: solid;
 }
 
-h1 {
-  font-family: "Lato";
-  margin: 4em 0 1em 0;
-  font-size: 28px;
-  line-height: 48px;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-}
-h2 {
-  font-family: "Lato";
-  margin: 4em 0 1.6em 0;
-  font-size: 20px;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-}
-h1:first-child, h2:first-child {
-  margin: 0 0 1.6em 0;
-}
-h3 {
-  font-family: "Lato";
-  margin: 0px;
-  font-size: 16px;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-}
 div.floatbox ul {
   text-align: left;
   padding-left:0px;
@@ -89,7 +164,8 @@ div.floatbox li {
 }
 div.floatbox {
   text-align: center;
-  position: fixed;
+  position: fixed; 
+  font-size: 14px;
   left: 70px;
   width: 160px;
   height: 160px;
@@ -114,20 +190,6 @@ div.scroll {
 }
 div.scroll li {
   margin: 0 0 1.6em 0;
-}
-a:hover {
-  color: #008888;
-  text-decoration: underline;
-}
-a {
-  color: #008888;
-  text-decoration: none;
-}
-.older {
-  float: left;
-}
-.newer {
-  float: right;
 }
 div.floatbox hr {
   border: 0;
@@ -155,6 +217,8 @@ header h1 {
   display: inline;
 }
 
+.older { float:left; }
+.newer { float: right; }
 .post-meta {
   display: inline;
   font-style: italic;
@@ -170,4 +234,3 @@ dd {
   margin: 0 0 1.6em 2em;
   font-style: italic;
 }
-

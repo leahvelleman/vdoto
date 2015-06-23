@@ -11,24 +11,14 @@ LilyPond understands note names in a lot of different languages.
 \relative c' { c d e f g a bf b c }
 {% endlilypond %}
 
-~~~
+{% lilypond code_sample %}
 \include "nederlands.ly"
 \relative c' { c d e f g a bes b c }
-~~~ 
-{: .language-lilypond}
-{% lilypond %}
-\include "english.ly"
-\relative c' { c d e f g a bf b c }
 {% endlilypond %}
 
-~~~
+{% lilypond code_sample %}
 \include "espanol.ly"
 \relative do' { do re mi fa sol la sib si do }
-~~~ 
-{: .language-lilypond}
-{% lilypond %}
-\include "english.ly"
-\relative c' { c d e f g a bf b c }
 {% endlilypond %}
 
 The note names in Spanish (and other Romance languages) look like the solfège
@@ -46,11 +36,10 @@ actually use what's called "fixed-do solfège" --- meaning that no matter what
 key the music is in, `do` means C natural, `re` means D natural, and so on. You
 can't get a major scale in B major by typing this:
 
-~~~
+{% highlight tex %}
 \include "espanol.ly"
 \relative do' { \key si \major do re mi fa sol la si do }
-~~~ 
-{: .language-lilypond}
+{% endhighlight %}
 
 Instead what you end up with is a B major key signature --- and then a C-major
 scale, written with lots of accidentals.
@@ -62,12 +51,7 @@ scale, written with lots of accidentals.
 
 To get a B-major scale you have to type something like this instead:
 
-~~~
-\include "espanol.ly"
-\relative do' { \key si \major si dos res mi fas sols las si }
-~~~ 
-{: .language-lilypond}
-{% lilypond %}
+{% lilypond code_sample %}
 \include "espanol.ly"
 \relative do' { \key si \major si dos res mi fas sols las si }
 {% endlilypond %}
@@ -92,7 +76,7 @@ There are two basic things we'd want from a movable-do music mode: it should set
 the key signature for the key we're writing in, and it should also transpose
 the music so that `do` is the first note of the major scale in that key signature.
 
-~~~
+{% highlight tex %}
 relative-do =
   #(define-music-function (parser location k m) ; take two real arguments: k and m.
                           (ly:pitch? ly:music?) ; k should be a pitch, m should be some music
@@ -100,14 +84,13 @@ relative-do =
       \transpose do $k { \relative $k { $m } }  % and transpose the music so that "do" is k
     #}
   )
-~~~ 
-{: .language-lilypond}
+{% endhighlight %}
 
 All that remains after that is to teach LilyPond the names of the notes. I've chosen
 to give it *both* the English note names *and* their most common names in movable-do
 solfège.
 
-~~~
+{% highlight tex %}
 relativeDoPitchNames = #`(
   (cf . ,(ly:make-pitch -1 0 FLAT))
   (c  . ,(ly:make-pitch -1 0 NATURAL))
@@ -154,31 +137,28 @@ relativeDoPitchNames = #`(
 )
 pitchnames = \relativeDoPitchNames
 #(ly:parser-set-note-names parser relativeDoPitchNames)
-~~~ 
-{: .language-lilypond}
+{% endhighlight %}
 
 With that code, we can write a major scale in any key as the familiar `do re mi
 fa so la ti do`, and all we have to do is specify first which pitch should count as
 `do`.
 
-~~~
+{% highlight tex %}
 \include "movable-do.ly"
 \relative-do c'  { do re mi fa so la ti do } % C major --- "do" is C
 \relative-do b'  { do re mi fa so la ti do } % B major --- "do" is B
 \relative-do bb' { do re mi fa so la ti do } % B-flat major --- "do" is Bb
-~~~ 
-{: .language-lilypond}
+{% endhighlight %}
 
 In most traditions that use movable-do solfège, a minor scale is sung starting on
 `la` rather than `do`. 
 
-~~~
+{% highlight tex %}
 \include "movable-do.ly"
 \relative-do c'  { la ti do re mi fa so la } % A minor --- "do" is C
 \relative-do b'  { la ti do re mi fa so la } % G-sharp minor --- "do" is B
 \relative-do bb' { la ti do re mi fa so la } % G minor --- "do" is Bb
-~~~ 
-{: .language-lilypond}
+{% endhighlight %}
 
 One more question
 ---
