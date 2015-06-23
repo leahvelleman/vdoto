@@ -23,6 +23,9 @@ particle *choqe*."][v12] Proceedings of SULA 7, 221--236.
 + Beaver and Velleman 2011. [*The communicative significance of primary and
 secondary accents.*][b+v11] Lingua 121(11), 1671--1692.
 
+## <a name="shalmaneser"></a> Technical writing
+
++ [Getting Started with Shalmaneser][shalmaneser], a guide to a (now-defunct) toolkit for word sense disambiguation and semantic role labeling.
 
 ## A note about names
 A few things linked here were published under my old first name, which I finally changed
@@ -45,4 +48,4 @@ as Leah Velleman, even if you're talking about old publications of mine.
 
 [b+v11]: http://semanticsarchive.net/Archive/WIyMzhiO/beaver-velleman-2011.pdf
 
-
+[shalmaneser]: /articles/shalmaneser.pdf
