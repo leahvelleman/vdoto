@@ -107,12 +107,6 @@ blockquote p:last-child {
   }
 }
 
-img {
-  display: block;
-  max-width: 100%;
-  margin: 0 0 1rem;
-  border-radius: 5px;
-}
 iframe {
   margin-left: 0em;
   padding-left: 40px;
@@ -180,6 +174,7 @@ div.icons {
   top: 100%;
   margin-left: -108px;
   margin-top: -36px;
+  width: 108px;
 }
 div.scroll {
   position: relative;
