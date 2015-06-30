@@ -13,8 +13,6 @@ permalink: pretty
 kramdown:
   syntax_highlighter: coderay
 
-paginate: 10
-
 image:
   source: assets/images/_fullsize
   presets:

@@ -1,35 +1,7 @@
 <div class="floatbox">
-<h3><a href="/">Leah Velleman</a></h3>
-<ul>
-  <li><a href="/all/">
-    {% if page.title == "All posts" %}<b>{% endif %}
-      All posts
-    {% if page.title == "All posts" %}</b>{% endif %}</a>
-  </li>
-  <li><a href="/writing/">
-    {% if page.title == "Writing" %}<b>{% endif %}
-      Writing
-    {% if page.title == "Writing" %}</b>{% endif %}</a>
-  </li>
-  <li><a href="/music/">
-    {% if page.title == "Music" %}<b>{% endif %}
-      Music
-    {% if page.title == "Music" %}</b>{% endif %}</a>
-  </li>
-  <!--  <li>Contact</li> -->
-</ul>
-{% if page.older or page.newer %}
-<hr>
-{% if page.older %}
-  <a href="{{page.older.url}}" class="older">&#9666; Older</a>
-{% endif %}
-{% if page.newer%}
-  <a href="{{page.newer.url}}" class="newer">Newer &#9656;</a>
-{% endif %}
-{% endif %}
-</div>
-<div class="icons">
-  <a href="mailto:leah.velleman@gmail.com"><img src="/email.png"></a>
-  <a href="http://www.twitter.com/leahvelleman/"><img src="/twitter.png"></a>
-  <a href="/feed.xml"><img src="/rss.png"></a>
+  <ul>
+    <li><b>Leah Velleman</b></li>
+    <li><a href="/">Home</a></li>
+    <li><a href="/all/">Blog</a></li>
+  </ul>
 </div>
