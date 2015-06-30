@@ -19,7 +19,7 @@ out- sleep -2sg.imper hangover -acc
 "Sleep off that hangover!"
 {% endhighlight %}
 
-Editing glossed text calls for special tools. (Doint it text in a word
+Editing glossed text calls for special tools. (Editing it in a word
 processor or Notepad is a chore; just getting the columns to line up
 properly is more trouble than it's worth.) As far as I can tell,
 almost everyone uses one of two programs: [ELAN](https://tla.mpi.nl/tools/tla-tools/elan/elan-description/) if they're glossing a
