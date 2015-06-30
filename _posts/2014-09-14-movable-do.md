@@ -1,7 +1,11 @@
 ---
 layout: post
 title: Movable-do solfege in LilyPond
-foo: Some basic thoughts on using solfège syllables for input.
+tags:
+ - music
+ - sacredharp
+ - tech
+ - lilypond
 ---
 
 LilyPond understands note names in a lot of different languages.

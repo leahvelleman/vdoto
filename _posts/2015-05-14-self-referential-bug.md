@@ -1,7 +1,10 @@
 ---
 layout: post
 title: "A bug that solves itself"
-foo: An unlikely example of self-reference.
+tags:
+ - tech
+ - jekyll
+ - self-reference
 ---
 
 Today I found a bug that solves itself. Not "fixes" --- "solves," by

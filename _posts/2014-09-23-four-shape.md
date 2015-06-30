@@ -1,7 +1,11 @@
 ---
 layout: post
 title: Four-shape note names in LilyPond
-foo: More on using solfège syllables for input — potentially useful for Sacred Harp composers.
+tags:
+ - music
+ - sacredharp
+ - tech
+ - lilypond
 ---
 
 In [my last post on movable-do note names in LilyPond,]({% post_url 2014-09-14-movable-do %})
